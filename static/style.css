@@ -1,0 +1,118 @@
+/* ====== Global ====== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ====== Top Bar ====== */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.top b {
+    display: block;
+    font-size: 16px;
+}
+
+.top a {
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ====== Add Crop Form (Admin) ====== */
+.add-form {
+    display: flex;
+    gap: 10px;
+    padding: 20px 24px;
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.add-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.add-form button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ====== Cards Grid ====== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ====== Individual Card ====== */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #2563eb;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* ====== Admin Controls in Card ====== */
+.card form {
+    margin-bottom: 8px;
+}
+
+.card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.card button {
+    width: 100%;
+    padding: 8px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card a {
+    display: block;
+    text-align: center;
+    margin-top: 6px;
+    color: #dc2626;
+    text-decoration: none;
+    font-size: 14px;
+}

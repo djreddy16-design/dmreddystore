@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DM Reddy Store</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="top">
+        <div>
+            <b>Contact:</b> 9243064769<br>
+            <b>Dasari Murali</b>
+        </div>
+
+        {% if session.get("admin") %}
+        <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        {% endif %}
+    </div>
+
+    {% if session.get("admin") %}
+    <form method="POST" action="/add" class="add-form">
+        <input name="name" placeholder="Crop name" required>
+        <input name="price" placeholder="₹ price (eg: ₹40 per kg)" required>
+        <button>Add Crop</button>
+    </form>
+    {% endif %}
+
+    <div class="cards">
+        {% for crop in crops %}
+        <div class="card">
+            <h3>{{ crop[1] }}</h3>
+            <p>{{ crop[2] }}</p>
+
+            {% if session.get("admin") %}
+            <form method="POST" action="/edit/{{ crop[0] }}">
+                <input name="price" placeholder="New price">
+                <button>Edit</button>
+            </form>
+            <a href="/delete/{{ crop[0] }}">Delete</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
